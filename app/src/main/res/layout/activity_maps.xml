@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/fab_coordinator_layout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#EEEEEE"
+android:fitsSystemWindows="true">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/blackbox"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:visibility="invisible"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:id="@+id/resultText"
+                android:textSize="20dp"
+
+                />
+
+
+        </ScrollView>
+
+
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:id="@+id/frame_layout"/>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aabir.metravv2.MapsActivity" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/nextDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_media_next"
+        app:backgroundTint="@android:color/black"
+        app:fabSize="normal"
+        app:layout_anchor="@id/frame_layout"
+        app:layout_anchorGravity="right|center" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/prevDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_media_previous"
+        app:backgroundTint="@android:color/black"
+        app:fabSize="normal"
+        app:layout_anchor="@id/frame_layout"
+        app:layout_anchorGravity="left|center"
+
+        />
+<android.support.design.widget.FloatingActionButton
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:src="@android:drawable/ic_dialog_info"
+    app:backgroundTint="@android:color/black"
+    app:fabSize="normal"
+    app:layout_anchor="@id/frame_layout"
+    app:layout_anchorGravity="left|bottom" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/alternateRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_media_play"
+        app:backgroundTint="@android:color/black"
+        app:fabSize="normal"
+        app:layout_anchor="@id/frame_layout"
+        app:layout_anchorGravity="bottom|center_horizontal" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/currentLocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_dialog_map"
+        app:backgroundTint="@android:color/black"
+        app:fabSize="normal"
+        app:layout_anchor="@id/frame_layout"
+        app:layout_anchorGravity="right|bottom"
+
+        />
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+

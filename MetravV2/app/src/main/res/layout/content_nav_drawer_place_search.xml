@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aabir.metravv2.NavDrawerPlaceSearchActivity"
+    tools:showIn="@layout/app_bar_nav_drawer_place_search">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:id="@+id/secondaryLinear"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".3"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    >
+                    <AutoCompleteTextView
+                        android:id="@+id/autocomplete_places_source_place_search_activity"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:background="@drawable/blackbox"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp"
+                        android:hint="Enter Source"
+                        android:textColorHint="@android:color/white"
+                        />
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/placeTypeSpinner"
+                        android:background="@android:drawable/btn_dropdown"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.1"
+
+                    >
+                    <SeekBar
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/seekBarDemo"
+                        android:layout_weight="8"
+                        android:background="@android:drawable/editbox_dropdown_dark_frame"
+                        />
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/distanceTextDemo"
+                        android:background="@android:drawable/editbox_background"
+                        android:numeric="integer"
+                        android:singleLine="true"
+                        android:layout_weight="2"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|left"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    >
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/secondaryLinear"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_get_my_location"
+        app:backgroundTint="@color/common_google_signin_btn_text_dark"
+        android:layout_height="wrap_content"
+        android:id="@+id/current_location_search_button_place_search_activity"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:drawable/btn_default"
+        android:id="@+id/testButtonPlace"
+        android:text="Find"
+        />
+
+
+
+</LinearLayout>
+
+</fragment>
+
+
+
